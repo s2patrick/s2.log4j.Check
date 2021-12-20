@@ -15,3 +15,6 @@ Wish you a happy Christmas, relaxing holidays with your family and a successful 
 
 Take care, 
 Patrick
+
+Credits to Jose Espitia (and others before)
+https://www.joseespitia.com/2021/12/15/how-to-detect-the-log4shell-vulnerability-with-powershell/
