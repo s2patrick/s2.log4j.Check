@@ -1,7 +1,7 @@
 # s2.log4j.Check
 SCOM management pack to monitor for log4j vulnerability
 
-I assume all are aware of the log4j vulnerability. To assist you finding concerned systems I’ve created a SCOM management pack which alerts on each (Windows) system affected. Please find the MP attached, ready for import in your management group with no further configuration required. The workflow runs every 24h at 03:30am.
+I assume all are aware of the log4j vulnerability. To assist you finding concerned systems I’ve created a SCOM management pack which alerts on each (Windows) system affected. Please find the MP attached, ready for import in your management group with no further configuration (but PowerShell v5) required. The workflow runs within 30min (SpreadInitializationOverInterval; to distribute peak on host servers) every 24h.
 This is an expensive task leading to high CPU (~50%) for a few seconds. Keep in mind to remove it once your environment is safe – or run it on an even higher schedule (like once a week). On some machines you might see random workflow timeouts, even when there are no issues most of the time.
 
 If you have SCCM you might have related files in the ccmcache directory (even when your system is not vulnerable). However, this is excluded in the workflow. If you have other deployment tools in place, it might be necessary to set an override to the “s2 log4j Check Monitor” using the “ExcludePath” property (RegEx-style (ccmcache|uninstall|Recycle.Bin|anyotherstring)).
@@ -18,3 +18,6 @@ Patrick
 
 Credits to Jose Espitia (and others before)
 https://www.joseespitia.com/2021/12/15/how-to-detect-the-log4shell-vulnerability-with-powershell/
+
+Updates:
+21.12.2021: removed SyncTime; added SpreadInitializationOverInterval = 1800s
