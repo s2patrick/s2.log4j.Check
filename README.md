@@ -29,3 +29,6 @@ Updates:
 * Updated file hashs based on https://github.com/lunasec-io/lunasec/blob/master/tools/log4shell/constants/vulnerablehashes.go
 * Added custom hash integration via overrides
 * Increased interval to 604800sec (= 1 week)
+* Added logging events
+* Changed workflow priority to low
+* Changed timeout to 900s
