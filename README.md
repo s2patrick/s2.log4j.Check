@@ -6,7 +6,7 @@ This is an expensive task leading to high CPU (~50%) for a few seconds. Keep in 
 
 If you have SCCM you might have related files in the ccmcache directory (even when your system is not vulnerable). However, this is excluded in the workflow. If you have other deployment tools in place, it might be necessary to set an override to the “s2 log4j Check Monitor” using the “ExcludePath” property (RegEx-style (ccmcache|uninstall|Recycle.Bin|anyotherstring)).
 
-The recent version only searches on C:\ and D:\ by default to avoid timeouts on many/large volumes (like on file servers). Consider an override if applications are installed on other volumes.
+The recent version only searches on C:\ and D:\ by default to avoid timeouts on many/large volumes (like on file servers). Consider an override if applications are installed on other volumes. If there are still volumes (like D:\) causing a workflow timeout on, for e.g., file servers, you can define an override (to C:\ only) for exactly those. 
 
 This MP has been tested in my lab and is running in production at a 1000+ agents environment with no issues. However, please try in your own lab before.
 Use at your own risk.
