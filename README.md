@@ -20,7 +20,12 @@ Credits to Jose Espitia (and others before)
 https://www.joseespitia.com/2021/12/15/how-to-detect-the-log4shell-vulnerability-with-powershell/
 
 Updates:
-21.12.2021: removed SyncTime; added SpreadInitializationOverInterval = 1800s
-25.01.2022: Updated file hashs based on https://github.com/lunasec-io/lunasec/blob/master/tools/log4shell/constants/vulnerablehashes.go
-            Added custom hash integration via overrides
-            Increased interval to 604800sec (= 1 week)
+
+21.12.2021: 
+* removed SyncTime
+* added SpreadInitializationOverInterval = 1800s
+
+25.01.2022: 
+* Updated file hashs based on https://github.com/lunasec-io/lunasec/blob/master/tools/log4shell/constants/vulnerablehashes.go
+* Added custom hash integration via overrides
+* Increased interval to 604800sec (= 1 week)
