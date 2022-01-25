@@ -34,4 +34,4 @@ Updates:
 * Added logging events
 * Changed timeout to 900s
 * Added overrideable parameter to search only on defined volumes (C:\ and D:\ by default); if applications are being installed on other drives in your environment you have to define it here.
-* Excluded mounted drives (\\...) independent of defined search volumes.
+* Excluded mounted drives ("\\...") independent of defined search volumes.
